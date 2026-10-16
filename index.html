@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f4ecd9">
+  <title>共识 Accord · 让想法与实现，始终对得上。</title>
+  <meta name="description" content="和 AI 一起，把想法写清楚，把交互试明白，把每一轮决定留在同一份产品规范里。共识 Accord 是开源、本机优先、自带模型的产品工作空间。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="共识 Accord · 让想法与实现，始终对得上。">
+  <meta property="og:description" content="和 AI 一起，把想法写清楚，把交互试明白，把每一轮决定留在同一份产品规范里。">
+  <meta property="og:url" content="https://accord-line.github.io/">
+  <link rel="canonical" href="https://accord-line.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="./" aria-label="共识 Accord 首页"><img src="favicon.svg" width="38" height="38" alt=""><span>共识 <em>Accord</em></span></a>
+    <nav aria-label="官网导航"><a href="#why">为什么共识</a><a href="#how">怎么用</a><a class="github" href="https://github.com/Accord-Line/accord">GitHub <span aria-hidden="true">↗</span></a></nav>
+    <a class="button small" href="/accord/">打开工作空间 <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="eyebrow"><span></span>共识 Accord · 首个公开预览</p>
+        <h1 id="hero-title">让想法与实现，<br>始终<span class="ink-underline">对得上。</span></h1>
+        <p class="intro">和 AI 一起，把想法写清楚，把交互试明白，把每一轮决定留在同一份产品规范里。</p>
+        <div class="hero-actions"><a class="button primary" href="/accord/">开始写下你的想法 <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/Accord-Line/accord">看看开源代码 <span aria-hidden="true">↗</span></a></div>
+        <p class="quiet-proof">无需注册 <i>·</i> 项目留在本机 <i>·</i> AI 用自己的模型</p>
+      </div>
+      <div class="demo-sheet" aria-label="产品交互示意">
+        <span class="tape" aria-hidden="true"></span><div class="sheet-head"><span>一个想法，慢慢清楚</span><span class="sample-stamp">交互示意</span></div>
+        <div class="demo-tabs" role="tablist" aria-label="试试共识的四个入口">
+          <button id="tab-write" role="tab" aria-selected="true" aria-controls="panel-write" data-panel="write" tabindex="0"><span aria-hidden="true">✎</span>规范</button>
+          <button id="tab-try" role="tab" aria-selected="false" aria-controls="panel-try" data-panel="try" tabindex="-1"><span aria-hidden="true">▷</span>体验</button>
+          <button id="tab-review" role="tab" aria-selected="false" aria-controls="panel-review" data-panel="review" tabindex="-1"><span aria-hidden="true">⇄</span>审阅</button>
+          <button id="tab-history" role="tab" aria-selected="false" aria-controls="panel-history" data-panel="history" tabindex="-1"><span aria-hidden="true">↶</span>历史</button>
+        </div>
+        <section id="panel-write" class="demo-panel" role="tabpanel" aria-labelledby="tab-write" tabindex="0"><div class="paper-kicker">01 / 把想法写下来</div><h2>先从一句话开始。</h2><label class="sr-only" for="sample-doc">示意规范正文</label><textarea id="sample-doc" spellcheck="false">## 我想做一个怎样的产品？
+
+让用户不再靠猜测，理解每一次操作。
+
+### 试试这个小交互
+鼠标经过卡片，它轻轻抬起；键盘聚焦也可以。
+
+### 怎样才算做好？
+- 调整参数，效果跟着变化。
+- 每一轮修改，由人确认。</textarea></section>
+        <section id="panel-try" class="demo-panel" role="tabpanel" aria-labelledby="tab-try" tabindex="0" hidden><div class="paper-kicker">02 / 亲手试一试</div><h2>感觉，值得验证。</h2><div class="mini-stage"><button class="preview-card" id="preview-card"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 25C13 23 21 15 26 5M14 5h12v12"/></svg><strong>轻轻经过，向上一步</strong><span>也可以按 Tab，把焦点放到这里</span></button></div><label class="slider-label" for="lift">抬升距离<input id="lift" type="range" min="0" max="24" value="8"><output id="lift-value" for="lift">8 px</output></label><p class="reduce-note" hidden>已遵循系统减少动态效果偏好，关闭卡片位移。</p></section>
+        <section id="panel-review" class="demo-panel" role="tabpanel" aria-labelledby="tab-review" tabindex="0" hidden><div class="paper-kicker">03 / 看清楚，再确认</div><h2>每个改动，都有来处。</h2><div class="sample-change removed"><small>－ 修改前</small><p>鼠标经过卡片，它轻轻抬起。</p></div><div class="sample-change added"><small>＋ 候选修改</small><p>鼠标经过或键盘聚焦时，卡片轻轻抬起。</p></div><p class="annotation">“键盘也能使用”成为可检查的要求。<br>建议先留下，由你审阅后决定。</p></section>
+        <section id="panel-history" class="demo-panel" role="tabpanel" aria-labelledby="tab-history" tabindex="0" hidden><div class="paper-kicker">04 / 留住每一次决定</div><h2>走过的路，可以回看。</h2><ol class="sample-history"><li><span>想法</span><strong>让操作有一点轻盈的反馈</strong><p>记下目标，也写下验收条件。</p></li><li><span>体验</span><strong>试过 8px，感觉刚好</strong><p>把亲手确认的参数写回规范。</p></li><li><span>决定</span><strong>保留键盘操作支持</strong><p>在工作空间中，批准后形成版本。</p></li></ol></section>
+        <div class="sheet-foot"><span>示意内容仅留在此页面，不保存项目</span><a href="/accord/">去写自己的规范 ↗</a></div>
+        <span class="scribble" aria-hidden="true">less guessing,<br>more understanding.</span>
+      </div>
+    </section>
+    <section id="why" class="why wrap" aria-labelledby="why-title"><div class="section-heading"><p class="eyebrow">一份规范，陪产品走下去</p><h2 id="why-title">好的想法，值得一路被理解。</h2><p>需求写下来之后，还会遇见交互、代码、测试和新的反馈。<br>共识让这些变化，始终有一份共同的依据。</p></div><div class="principles">
+      <article><span class="index">01</span><h3>写你真正想表达的。</h3><p>直接写 Markdown。自由组织段落、需求与验收标准，也可以请 AI 帮你补充和修改。</p><span class="tiny-note">写作不需要先配置 Key</span></article>
+      <article><span class="index">02</span><h3>把“差不多”变成亲手试过。</h3><p>操作受控交互，调整参数、文案与组件属性。让需求里的体验，有看得见的依据。</p><span class="tiny-note">参数与规范一起进入审阅</span></article>
+      <article><span class="index">03</span><h3>每一次向前，都由你确认。</h3><p>AI 提出候选，你看清变化后批准。版本、决定和交接材料，都能带走，也能回看。</p><span class="tiny-note">批准规范与实现验证分别记录</span></article>
+    </div></section>
+    <section id="how" class="how wrap" aria-labelledby="how-title"><div class="section-heading"><p class="eyebrow">从一句话，到下一次迭代</p><h2 id="how-title">一起想清楚，也一起做下去。</h2></div><ol class="journey"><li><span>01</span><h3>写下想法</h3><p>新建或导入规范，自由编辑正文。AI 可以从第一笔开始参与。</p></li><li><span>02</span><h3>试明白交互</h3><p>亲手操作、调整参数，再把确定的体验写进草稿。</p></li><li><span>03</span><h3>审阅并交接</h3><p>批准这一轮，导出规范与交接包，交给你自己的开发工具。</p></li><li><span>04</span><h3>带着反馈回来</h3><p>把开发和验收结论写回规范，继续下一轮。</p></li></ol><p class="scope-note">当前支持规范编辑、交互预览、人工批准、版本历史和文件交接。外部代码实现与测试由你自己的工具执行；自动回流与更完整的生命周期追踪仍在完善。</p></section>
+    <section class="ownership wrap" aria-labelledby="ownership-title"><div><p class="eyebrow">开源 · 本机优先 · BYOK</p><h2 id="ownership-title">想法是你的，<br>工作方式也是。</h2><a class="text-link" href="https://github.com/Accord-Line/accord">一起把共识做得更好 ↗</a></div><dl><div><dt>项目留在你的浏览器。</dt><dd>没有官方账号和云端项目库。导出备份，换个地方也能继续。</dd></div><div><dt>模型由你选择。</dt><dd>支持 TokenDance 授权和兼容服务。调用前检查上下文；Key 只留在当前页面内存，费用由服务商账户承担。</dd></div><div><dt>你的规范，人和 AI 都能读。</dt><dd>自然语言表达意图，结构化数据支持工具。保留同一份产品依据。</dd></div></dl></section>
+    <section class="closing wrap"><p class="handwritten" aria-hidden="true">make room for good ideas.</p><h2>下一步，从你的想法开始。</h2><a class="button primary" href="/accord/">打开共识 Accord <span aria-hidden="true">↗</span></a><p>公开预览 · 无需注册 · 手动编辑无需模型 Key</p></section>
+  </main>
+  <footer class="wrap"><a class="wordmark" href="./"><span>共识 <em>Accord</em></span></a><p>让想法与实现，始终对得上。</p><div><a href="https://github.com/Accord-Line/accord">开源仓库</a><a href="https://github.com/Accord-Line/accord/blob/main/SECURITY.md">隐私与安全</a><a href="LICENSE">Apache-2.0</a><a href="https://github.com/Accord-Line/accord-line.github.io/tree/main/fonts">字体许可</a></div><small>© 2026 Accord contributors</small></footer>
+</body>
+</html>

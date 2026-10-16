@@ -1,0 +1,41 @@
+{
+  "scope": "local website browser walkthrough; not a user study",
+  "reports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1080,
+      "overflow": false,
+      "errors": [],
+      "external": [],
+      "previewTransform": "matrix(1, 0, 0, 1, 0, -15)",
+      "reducedTransform": "none",
+      "keyboardTabs": true,
+      "inputPreserved": true
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "errors": [],
+      "external": [],
+      "previewTransform": "matrix(1, 0, 0, 1, 0, -15)",
+      "reducedTransform": "none",
+      "keyboardTabs": true,
+      "inputPreserved": true
+    },
+    {
+      "name": "small",
+      "width": 320,
+      "height": 740,
+      "overflow": false,
+      "errors": [],
+      "external": [],
+      "previewTransform": "matrix(1, 0, 0, 1, 0, -15)",
+      "reducedTransform": "none",
+      "keyboardTabs": true,
+      "inputPreserved": true
+    }
+  ]
+}
